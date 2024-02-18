@@ -1,7 +1,10 @@
+import {BrowserRouter} from 'react-router-dom'
+import Navbar from './components/Navbar'
+
 export default function App() {
   return (
-    <div className="relative z-0 bg-primary">
-      HELLO WORLD
-    </div>
+    <BrowserRouter>
+      <Navbar />
+    </BrowserRouter>
   )
 }
