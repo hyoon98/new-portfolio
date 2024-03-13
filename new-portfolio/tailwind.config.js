@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "asap": ['Asap', 'sans-serif'],
-      }
+        asap: ["Asap", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
+      },
     },
   },
   plugins: [],

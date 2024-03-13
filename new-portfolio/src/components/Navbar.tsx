@@ -21,7 +21,7 @@ function Navbar() {
     ]
 
     return (
-        <div className={`${styles.paddingX} w-full flex justify-between max-w-full mx-auto items-center py-5 fixed top-0 z-20`}>
+        <div className={`${styles.paddingX} w-full flex justify-between max-w-full mx-auto items-center py-5 fixed top-0`}>
             <Link to='/'>
                 <div className='text-[35px] cursor-pointer font-bold text-white font-asap'>HANSOO YOON</div>
             </Link>
