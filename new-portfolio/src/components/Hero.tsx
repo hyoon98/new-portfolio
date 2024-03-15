@@ -11,10 +11,10 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
         moonAnimation()
         starAnimation()
         starAnimation2()
-    },[] )
+    }, [])
 
     async function starAnimation() {
-        await animateStar(scopeStar.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 1.5 })
+        await animateStar(scopeStar.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 0.6 })
         await new Promise(r => setTimeout(r, 3000));
         await animateStar([
             [scopeStar.current, { filter: 'blur(0px)' }, { duration: 1 }],
@@ -23,7 +23,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     }
 
     async function starAnimation2() {
-        await animateStar2(scopeStar2.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 1.5 })
+        await animateStar2(scopeStar2.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 0.6 })
         await new Promise(r => setTimeout(r, 6000));
         await animateStar2([
             [scopeStar2.current, { filter: 'blur(0px)' }, { duration: 1 }],
@@ -32,7 +32,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     }
 
     async function moonAnimation() {
-        await animateMoon(scopeMoon.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 1.5 })
+        await animateMoon(scopeMoon.current, { opacity: 1, filter: 'blur(4px)' }, { duration: 1, delay: 0.6 })
         await animateMoon([[scopeMoon.current, { filter: 'blur(0px)' }, { duration: 1 }], [scopeMoon.current, { filter: 'blur(4px)' }, { delay: 3, duration: 1 }]], { repeat: Infinity, repeatDelay: 5 })
     }
     return (
@@ -46,17 +46,17 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
             <div className={`px-[150px] py-[72px] w-full flex flex-col vh-screen`}>
                 <div className='h-[calc((100vh-72px)/1.75)] flex items-end'>
                     <div className='overflow-hidden w-full'>
-                        <motion.div animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.5, delay: 0.2 }}
-                            className='text-9xl font-raleway font-semibold  '>
+                        <motion.div animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}
+                            className='text-9xl font-lato font-semibold  '>
                             Hi! I'm Hansoo
                         </motion.div>
                     </div>
                 </div>
                 <div>
                     <div className='overflow-hidden w-full'>
-                        <motion.div animate={{ y: 0, opacity: 1, filter: "blur(0px)" }} initial={{ y: -20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.5, delay: 1 }}
-                            className='text-4xl w-full h-full font-raleway'>
-                            a software developer on a mission to turn ideas into innovative solutions. Explore my projects and let's shape the future together!
+                        <motion.div animate={{ y: 0, opacity: 1, filter: "blur(0px)" }} initial={{ y: -20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}
+                            className='text-4xl w-full h-full font-lato'>
+                            a software developer on a mission to turn ideas into innovative solutions. Explore my site and let's shape the future together!
                         </motion.div>
                     </div>
                 </div>

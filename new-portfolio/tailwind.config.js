@@ -6,6 +6,7 @@ export default {
       fontFamily: {
         asap: ["Asap", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
   },

@@ -32,7 +32,7 @@ function Navbar() {
                     </a>
                     :
                     <Link to={link.path} {...(link.name === "Resume" ? { target: "_blank", rel: "noreferrer" } : {})}>
-                        <li className={`mx-3 text-white transition hover:text-[#808080]`}>{link.name}</li>
+                        <li className={`mx-3 text-white transition hover:text-[#808080] font-lato font-bold`}>{link.name}</li>
                     </Link>
                 ))}
             </ul>
@@ -47,7 +47,7 @@ function Navbar() {
                         </a>
                         :
                         <Link to={link.path} {...(link.name === "Resume" ? { target: "_blank", rel: "noreferrer" } : {})}>
-                            <li className={`mx-3 text-white text-xl transition hover:text-[#808080]`} onClick={
+                            <li className={`mx-3 text-white text-xl transition hover:text-[#808080] font-lato font-bold`} onClick={
                                 () => setMenu(false)
                             }>{link.name}</li>
                         </Link>
