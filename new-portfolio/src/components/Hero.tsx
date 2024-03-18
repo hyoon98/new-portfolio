@@ -47,7 +47,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
                 <div className='h-[calc((100vh-72px)/1.75)] flex items-end'>
                     <div className='overflow-hidden w-full'>
                         <motion.div animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}
-                            className='text-9xl font-lato font-semibold  '>
+                            className='text-9xl font-lato font-semibold  text-cyan-400'>
                             Hi! I'm Hansoo
                         </motion.div>
                     </div>

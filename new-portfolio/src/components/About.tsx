@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { easeInOut, motion } from "framer-motion"
 
 
 function About({ x, y }: { x: number, y: number }): JSX.Element {
@@ -12,36 +12,56 @@ function About({ x, y }: { x: number, y: number }): JSX.Element {
             <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50'>
             </div>
             <div className={`px-[150px] py-[72px] w-full flex flex-col vh-screen justify-center items-center`}>
-                <motion.div className={"font-lato text-5xl font-semibold py-10"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
-                    About Me
+                <motion.div className={"font-lato text-6xl font-semibold py-10 text-cyan-400"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
+                    I'm Hansoo.
                 </motion.div>
                 <motion.div className={"flex flex-row justify-evenly items-center mt-5"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
                     <div className={"font-lato text-5xl font-semibold py-10 w-[400px]"} >
                         Test
                     </div>
-                    <div className={"w-[400px] m-2 p-3 bg-gray-400 bg-opacity-25 rounded-3xl backdrop-blur-xl"}>
-                        <div className={"font-lato text-xl py-2"}>
+                    <div className={"w-1/2 m-2 p-8 bg-blue-800 bg-opacity-25 rounded-3xl backdrop-blur-xl"}>
+                        <div className={"font-lato text-2xl py-2"}>
                             {"I'm a new Computer Science graduate with a focus on full-stack development. Although most of my experience and personal projects are with React, I am eager to refine my various technical skills in other areas and see where my career takes me."}
                         </div>
-                        <div className={"font-lato text-xl py-2"} >
+                        <div className={"font-lato text-2xl py-2"} >
                             {"Outside of VSCode, I can be found skiing the slopes, in the bouldering gym, or doing any other stereotypical Vancouverite activity."}
                         </div>
                     </div>
                 </motion.div>
-                <div className="flex flex-row justify-center items-center self-start w-full">
-                    <div className="">
-                        <div className={"p-3 rounded-2xl bg-gray-400 bg-opacity-25 backdrop-blur-xl text-2xl font-semibold font-lato"}>
-                            Skills:
+                <motion.div className="font-lato font-semibold text-5xl my-24 text-cyan-400 self-start" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
+                    Skills
+                </motion.div>
+                <motion.div className="flex flex-row justify-evenly items-center self-start w-full " animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                    <div className="w-5/12 px-10 py-10 bg-blue-800 bg-opacity-25 rounded-3xl ">
+                        <div className={"font-lato text-3xl font-semibold flex flex-row space-x-3 items-center mb-3"}>
+                            <img src="icons8-react.svg" className="h-20"></img>
+                            <div>Front-end Development</div>
+                        </div>
+                        <div className="text-2xl font-lato">
+                            Professional experience with Javascript, React, Redux, and Typescript.
                         </div>
                     </div>
-                    <ul className="flex flex-row justify-center items-center">
-                        {skills.map((skill: string) => (
-                            <li className="p-2 m-4 bg-gray-400 bg-opacity-25 backdrop-blur-xl rounded-xl">
-                                {skill}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                    <div className="w-5/12 px-10 py-10 bg-blue-800 bg-opacity-25 rounded-3xl ">
+                        <div className={"font-lato text-3xl font-semibold flex flex-row space-x-3 items-center mb-3"}>
+                            <img src="icons8-software-development.svg" className="h-20"></img>
+                            <div>Software Engineering</div>
+                        </div>
+                        <div className="text-2xl font-lato">
+                            Studied OOP and data structures in Java, C/C++, and Python.
+                        </div>
+                    </div>
+                </motion.div>
+                <motion.div className="font-lato font-semibold text-5xl my-24 text-cyan-400 self-start" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
+                    Work Experience
+                </motion.div>
+                <motion.div className="flex flex-row justify-evenly items-center self-start w-full " animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                    <a href="https://www.celayix.com" className="w-6/12 mx-5 flex justify-center items-center">
+                        <motion.img src="celayix.png" whileHover={{ scale: 1.05 }} transition={{ ease: "easeOut", duration: 0.15 }} className="h-90 rounded-3xl" />
+                    </a>
+                    <a href="https://www.vancity.com" className="w-6/12 mx-5 flex justify-center items-center">
+                        <motion.img src="VanCity.jpg" whileHover={{ scale: 1.05 }} transition={{ ease: "easeOut", duration: 0.15 }} className="h-90 rounded-3xl" />
+                    </a>
+                </motion.div>
             </div>
         </>
     )
