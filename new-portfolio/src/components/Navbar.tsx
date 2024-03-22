@@ -12,6 +12,17 @@ type NavLink = {
 
 function Navbar() {
     const [menu, setMenu] = useState(false)
+    const [scroll, setScroll] = useState(false)
+
+    const onScroll = () => {
+        if (window.scrollY > 200) {
+            setScroll(true)
+        } else {
+            setScroll(false)
+        }
+    }
+
+    const scrollStyles = "bg-opacity-40 backdrop-blur-sm bg-black rounded-3xl"
 
     const links: NavLink[] = [
         { name: 'About', icon: false, path: '/about' },
@@ -20,12 +31,14 @@ function Navbar() {
         { name: 'LinkedIn', icon: true, path: 'https://www.linkedin.com/in/hansoo-yoon-557265195/', iconPath: "/icons8-linkedin.svg", onHover: "/icons8-linkedin-grey.svg" },
     ]
 
+    window.addEventListener('scroll', onScroll)
+
     return (
-        <div className={`${styles.paddingX} w-full flex justify-between max-w-full mx-auto items-center py-5 fixed z-50 bg-opacity-80 top-0`}>
-            <Link to='/'>
-                <div className='text-[35px] cursor-pointer font-bold text-white font-asap'>HANSOO YOON</div>
+        <div className={`${styles.paddingX} w-full flex justify-between mx-auto items-center py-5 fixed z-50 top-0 ${menu ? "bg-opacity-30 bg-black backdrop-blur-sm" : ""}`}>
+            <Link to='/' onClick={() => setMenu(false)}>
+                <div className={`text-[30px] cursor-pointer font-bold text-white font-asap p-3 ${scroll && !menu ? scrollStyles : ""}`}>HANSOO YOON</div>
             </Link>
-            <ul className={`hidden sm:flex flex-row gap-4`}>
+            <ul className={`hidden sm:flex flex-row gap-4 p-2 ${scroll ? scrollStyles : ""}`}>
                 {links.map((link) => (link.icon ?
                     <a href={link.path}>
                         <img src={link.iconPath || ""} onMouseEnter={e => e.currentTarget.src = link.onHover || ""} onMouseLeave={e => e.currentTarget.src = link.iconPath || ""} alt={link.name} className='w-8 h-8' />
@@ -36,11 +49,11 @@ function Navbar() {
                     </Link>
                 ))}
             </ul>
-            <div className='sm:hidden flex flex-1 justify-end items-center'>
+            <div className={`sm:hidden flex flex-1 justify-end items-center`}>
                 <img src={menu ? '/close.svg' : '/hamburger.svg'} className='w-8 h-8 mx-2 cursor-pointer' onClick={
                     () => setMenu(!menu)
                 } />
-                <ul className={`${menu ? "flex" : "hidden"} flex-col fixed left-0 right-0 top-[92px] h-[calc(100vh-92px)] items-center justify-top gap-6 bg-opacity-30`}>
+                <ul className={`${menu ? "flex" : "hidden"} flex-col fixed left-0 right-0 top-[109px] h-[calc(100vh-109px)] items-center justify-top gap-6 bg-opacity-30 bg-black backdrop-blur-sm`}>
                     {links.map((link) => (link.icon ?
                         <a href={link.path}>
                             <img src={link.iconPath || ""} onMouseEnter={e => e.currentTarget.src = link.onHover || ""} onMouseLeave={e => e.currentTarget.src = link.iconPath || ""} alt={link.name} className='w-8 h-8' />
