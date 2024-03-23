@@ -1,4 +1,3 @@
-import { styles } from '../styles'
 import { motion, useAnimate } from 'framer-motion'
 import { useEffect } from 'react';
 function Hero({ x, y }: { x: number, y: number }): JSX.Element {
