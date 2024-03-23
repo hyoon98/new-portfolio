@@ -22,7 +22,7 @@ function Navbar() {
         }
     }
 
-    const scrollStyles = "bg-opacity-40 backdrop-blur-sm bg-black rounded-3xl"
+    const scrollStyles = "bg-opacity-30 backdrop-blur-sm bg-black rounded-3xl"
 
     const links: NavLink[] = [
         { name: 'About', icon: false, path: '/about' },
@@ -50,7 +50,7 @@ function Navbar() {
                 ))}
             </ul>
             <div className={`sm:hidden flex flex-1 justify-end items-center`}>
-                <img src={menu ? '/close.svg' : '/hamburger.svg'} className='w-8 h-8 mx-2 cursor-pointer' onClick={
+                <img src={menu ? '/close.svg' : '/hamburger.svg'} className={`w-8 h-8 cursor-pointer`} onClick={
                     () => setMenu(!menu)
                 } />
                 <ul className={`${menu ? "flex" : "hidden"} flex-col fixed left-0 right-0 top-[109px] h-[calc(100vh-109px)] items-center justify-top gap-6 bg-opacity-30 bg-black backdrop-blur-sm`}>
@@ -60,7 +60,7 @@ function Navbar() {
                         </a>
                         :
                         <Link to={link.path} {...(link.name === "Resume" ? { target: "_blank", rel: "noreferrer" } : {})}>
-                            <li className={`mx-3 text-white text-xl transition hover:text-[#808080] font-lato font-bold`} onClick={
+                            <li className={`mx-3 text-white text-xl transition hover:text-[rgb(128,128,128)] font-lato font-bold`} onClick={
                                 () => setMenu(false)
                             }>{link.name}</li>
                         </Link>

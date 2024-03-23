@@ -11,13 +11,13 @@ function About({ x, y }: { x: number, y: number }): JSX.Element {
             <div style={{ top: y, left: x }} className={`h-[100px] w-[100px] -z-10 fixed -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-cyan-400`}></div>
             <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50'>
             </div>
-            <div className={`px-[150px] py-[72px] w-full flex flex-col vh-screen justify-center items-center`}>
+            <div className={`max-sm:p-[50px] px-[150px] py-[72px] w-full flex flex-col vh-screen justify-center items-center`}>
                 <motion.div className={"font-lato text-6xl font-semibold py-10 text-cyan-400"}>
                     I'm Hansoo.
                 </motion.div>
-                <div className={"flex flex-row space-x-8 space-y-7 justify-evenly items-center flex-wrap mt-5"}>
+                <div className={"flex flex-row max-sm:space-x-0 space-x-8 space-y-7 justify-evenly items-center flex-wrap mt-5"}>
                     <motion.img className={"relative w-[350px] bg-black bg-opacity-40 bg-clip-content rounded-full"} src="profile.png" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }} />
-                    <motion.div className={"w-[500px] p-8 bg-blue-800 bg-opacity-25 rounded-3xl backdrop-blur-xl"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                    <motion.div className={"max-sm:w-[300px] w-[500px] p-8 bg-blue-800 bg-opacity-25 rounded-3xl backdrop-blur-xl"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
                         <div className={"font-lato text-2xl py-2"}>
                             {"I'm a new Computer Science graduate with a focus on full-stack development. Although most of my experience and personal projects are with React, I'm eager to refine my technical skills in other areas and see where my career takes me."}
                         </div>
