@@ -15,7 +15,7 @@ function About({ x, y }: { x: number, y: number }): JSX.Element {
                 </motion.div>
                 <div className={"flex flex-row max-sm:space-x-0 space-x-8 space-y-7 justify-evenly items-center flex-wrap mt-5"}>
                     <motion.img className={"relative w-[350px] bg-black bg-opacity-40 bg-clip-content rounded-full"} src="profile.webp" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }} />
-                    <motion.div className={"max-sm:w-[300px] w-[500px] p-8 bg-blue-800 bg-opacity-25 rounded-3xl backdrop-blur-xl"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                    <motion.div className={"max-sm:w-[350px] w-[500px] p-8 bg-blue-800 bg-opacity-25 rounded-3xl backdrop-blur-xl"} animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
                         <div className={"font-lato text-2xl py-2"}>
                             {"I'm a new Computer Science graduate with a focus on full-stack development. Although most of my experience and personal projects are with React, I'm eager to refine my technical skills in other areas and see where my career takes me."}
                         </div>
