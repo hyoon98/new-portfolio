@@ -27,7 +27,7 @@ function About({ x, y }: { x: number, y: number }): JSX.Element {
                 <motion.div className="font-lato font-semibold text-5xl my-24 text-cyan-400 self-start" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
                     Skills
                 </motion.div>
-                <motion.div className="flex flex-row justify-evenly items-center self-start w-full flex-wrap" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                <motion.div className="flex flex-row justify-center items-center self-start w-full flex-wrap" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
                     <div className="min-w-[350px] w-[400px] m-2 px-10 py-10 bg-blue-800 bg-opacity-25 rounded-3xl ">
                         <div className={"font-lato text-3xl font-semibold flex flex-row space-x-3 items-center mb-3"}>
                             <img src="icons8-react.svg" className="h-20"></img>
@@ -50,7 +50,7 @@ function About({ x, y }: { x: number, y: number }): JSX.Element {
                 <motion.div className="font-lato font-semibold text-5xl my-24 text-cyan-400 self-start" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}>
                     Work Experience
                 </motion.div>
-                <motion.div className="flex flex-row justify-evenly items-center self-start w-full max-lg:flex-wrap" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
+                <motion.div className="flex flex-row gap-4 justify-center items-center self-start w-full max-lg:flex-wrap" animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.4 }}>
                     <a href="https://www.celayix.com" className="flex justify-center items-center">
                         <motion.img src="celayix.png" whileHover={{ scale: 1.05 }} transition={{ ease: "easeOut", duration: 0.15 }} className="py-3 px-3 h-90 rounded-3xl w-[400px]" />
                     </a>
