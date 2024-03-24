@@ -1,4 +1,4 @@
-import { motion, useAnimate } from 'framer-motion'
+import { animate, motion, transform, useAnimate } from 'framer-motion'
 import { useEffect } from 'react';
 function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     const [scopeMoon, animateMoon] = useAnimate();
@@ -13,26 +13,26 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     }, [])
 
     async function starAnimation() {
-        await animateStar(scopeStar.current, { opacity: 1, filter: 'blur(5px)' }, { duration: 1, delay: 0.6 })
+        await animateStar(scopeStar.current, { opacity: 1, filter: 'blur(5px)' }, { duration: 0.5, delay: 0.6 })
         await new Promise(r => setTimeout(r, 3000));
         await animateStar([
-            [scopeStar.current, { filter: 'blur(2px)' }, { duration: 1 }],
-            [scopeStar.current, { filter: 'blur(5px)' }, { delay: 3, duration: 1 }
+            [scopeStar.current, { filter: 'blur(2px)', scale: 1.1 }, { duration: 0.4, type: "spring", stiffness: 200 }],
+            [scopeStar.current, { filter: 'blur(5px)', scale: 1 }, { duration: 0.4, type: "spring", stiffness: 200 }
             ]], { repeat: Infinity, repeatDelay: 5 })
     }
 
     async function starAnimation2() {
-        await animateStar2(scopeStar2.current, { opacity: 1, filter: 'blur(5px)' }, { duration: 1, delay: 0.6 })
+        await animateStar2(scopeStar2.current, { opacity: 1, filter: 'blur(5px)' }, { duration: 0.5, delay: 0.6 })
         await new Promise(r => setTimeout(r, 6000));
         await animateStar2([
-            [scopeStar2.current, { filter: 'blur(2px)' }, { duration: 1 }],
-            [scopeStar2.current, { filter: 'blur(5px)' }, { delay: 3, duration: 1 }
+            [scopeStar2.current, { filter: 'blur(2px)', scale: 1.1 }, { duration: 0.4, type: "spring", stiffness: 200 }],
+            [scopeStar2.current, { filter: 'blur(5px)', scale: 1 }, { duration: 0.4, type: "spring", stiffness: 200 }
             ]], { repeat: Infinity, repeatDelay: 5 })
     }
 
     async function moonAnimation() {
         await animateMoon(scopeMoon.current, { opacity: 1, filter: 'blur(5px)' }, { duration: 1, delay: 0.6 })
-        await animateMoon([[scopeMoon.current, { filter: 'blur(2px)' }, { duration: 1 }], [scopeMoon.current, { filter: 'blur(5px)' }, { delay: 3, duration: 1 }]], { repeat: Infinity, repeatDelay: 5 })
+        await animateMoon([[scopeMoon.current, { filter: 'blur(2px)', scale: 1.1 }, { duration: 0.4 }], [scopeMoon.current, { filter: 'blur(5px)', scale: 1 }, { duration: 0.4, type: "spring", stiffness: 200 }]], { repeat: Infinity, repeatDelay: 5 })
     }
     return (
         <>
