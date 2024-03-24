@@ -1,4 +1,4 @@
-import { animate, motion, transform, useAnimate } from 'framer-motion'
+import { motion, useAnimate } from 'framer-motion'
 import { useEffect } from 'react';
 function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     const [scopeMoon, animateMoon] = useAnimate();
