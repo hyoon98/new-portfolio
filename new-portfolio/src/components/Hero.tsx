@@ -37,7 +37,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     return (
         <>
             <div style={{ top: y, left: x }} className={`h-[100px] w-[100px] -z-10 fixed -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-cyan-400 overflow-y-hidden`}></div>
-            <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50'>
+            <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50 overflow-y-hidden'>
                 <img className='fixed h-[150px] top-1/4 left-3/4 blur-sm display opacity-0  max-lg:hidden' ref={scopeMoon} src={'icons8-moon-90.png'} />
                 <img className='fixed h-[100px] top-1/4 left-20 blur-sm opacity-0 max-sm:h-[75px] max-sm:top-1/3 max-sm:left-10' ref={scopeStar} src={'icons8-4-point-star-64.png'} />
                 <img className='fixed h-[100px] top-1/3 right-1/4 blur-sm opacity-0 max-lg:hidden' ref={scopeStar2} src={'icons8-4-point-star-64.png'} />
