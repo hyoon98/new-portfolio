@@ -42,8 +42,8 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
                 <img className='fixed h-[100px] top-1/4 left-20 blur-sm opacity-0 max-sm:h-[75px] max-sm:top-1/3 max-sm:left-10' ref={scopeStar} src={'icons8-4-point-star-64.png'} />
                 <img className='fixed h-[100px] top-1/3 right-1/4 blur-sm opacity-0 max-lg:hidden' ref={scopeStar2} src={'icons8-4-point-star-64.png'} />
             </div>
-            <div className={`max-sm:px-[50px] max-sm:py-[50px] max-md:px-[65px] px-[150px] py-[72px] w-full flex flex-col vh-screen`}>
-                <div className='h-[calc((100vh-72px)/1.75)] flex items-end'>
+            <div className={`max-sm:px-[50px] max-sm:py-[50px] max-md:px-[65px] px-[150px] py-[72px] w-full overflow-y-hidden flex flex-col`}>
+                <div className='h-[calc((100vh-72px)/1.75)] overflow-y-hidden flex items-end'>
                     <div className='overflow-hidden w-full'>
                         <motion.div animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}
                             className='text-9xl font-lato font-semibold  text-cyan-400 max-sm:text-6xl max-md:text-8xl'>
