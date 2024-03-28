@@ -34,7 +34,7 @@ function Navbar() {
     window.addEventListener('scroll', onScroll)
 
     return (
-        <div className={`${styles.paddingX} w-full flex justify-between mx-auto items-center py-5 fixed z-50 top-0 ${menu ? "bg-opacity-30 bg-black backdrop-blur-sm" : ""}`}>
+        <div className={`${styles.paddingX} overflow-y-hidden w-full flex justify-between mx-auto items-center py-5 fixed z-50 top-0 ${menu ? "bg-opacity-30 bg-black backdrop-blur-sm" : ""}`}>
             <Link to='/' onClick={() => setMenu(false)}>
                 <div className={`text-[30px] cursor-pointer font-bold text-white font-asap p-3 ${scroll && !menu ? scrollStyles : ""}`}>HANSOO YOON</div>
             </Link>
