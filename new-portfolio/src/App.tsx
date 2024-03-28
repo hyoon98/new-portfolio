@@ -8,7 +8,7 @@ export default function App() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   return (
     <BrowserRouter>
-      <div className='h-screen w-screen' onMouseMove={(e) => setMousePos({ x: e.clientX, y: e.clientY })}>
+      <div className='' onMouseMove={(e) => setMousePos({ x: e.clientX, y: e.clientY })}>
         <Navbar />
         <Routes>
           <Route path='/' element={<Hero x={mousePos.x} y={mousePos.y} />} />
