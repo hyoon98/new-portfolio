@@ -36,13 +36,13 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
     }
     return (
         <>
-            <div style={{ top: y, left: x }} className={`h-[100px] w-[100px] -z-10 fixed -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-cyan-400`}></div>
+            <div style={{ top: y, left: x }} className={`h-[100px] w-[100px] -z-10 fixed -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-cyan-400 overflow-y-hidden`}></div>
             <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50'>
                 <img className='fixed h-[150px] top-1/4 left-3/4 blur-sm display opacity-0  max-lg:hidden' ref={scopeMoon} src={'icons8-moon-90.png'} />
                 <img className='fixed h-[100px] top-1/4 left-20 blur-sm opacity-0 max-sm:h-[75px] max-sm:top-1/3 max-sm:left-10' ref={scopeStar} src={'icons8-4-point-star-64.png'} />
                 <img className='fixed h-[100px] top-1/3 right-1/4 blur-sm opacity-0 max-lg:hidden' ref={scopeStar2} src={'icons8-4-point-star-64.png'} />
             </div>
-            <div className={`max-sm:px-[50px] max-sm:py-[50px] max-md:px-[65px] px-[150px] py-[72px] w-full fixed top-1/3`}>
+            <div className={`max-sm:px-[50px] max-sm:py-[50px] max-md:px-[65px] px-[150px] py-[72px] w-full fixed top-1/3 overflow-y-hidden`}>
                 <div className='overflow-y-hidden flex items-end'>
                     <div className='overflow-hidden w-full'>
                         <motion.div animate={{ y: 0, opacity: 1, filter: 'blur(0px)' }} initial={{ y: 20, opacity: 0, filter: "blur(5px)" }} transition={{ ease: "easeOut", duration: 0.3, delay: 0.2 }}
