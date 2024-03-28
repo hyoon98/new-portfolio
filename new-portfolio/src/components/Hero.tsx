@@ -35,7 +35,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
         await animateMoon([[scopeMoon.current, { filter: 'blur(2px)', scale: 1.1 }, { duration: 0.4 }], [scopeMoon.current, { filter: 'blur(5px)', scale: 1 }, { duration: 0.4, type: "spring", stiffness: 200 }]], { repeat: Infinity, repeatDelay: 5 })
     }
     return (
-        <>
+        <div className='overflow-y-hidden'>
             <div style={{ top: y, left: x }} className={`h-[100px] w-[100px] -z-10 fixed -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl bg-cyan-400 overflow-y-hidden`}></div>
             <div className='h-screen fixed bg-[linear-gradient(20deg,rgba(0,0,0,1),rgba(19,8,106,1),rgba(0,0,0,1))] w-screen -z-50 overflow-y-hidden'>
                 <img className='fixed h-[150px] top-1/4 left-3/4 blur-sm display opacity-0  max-lg:hidden' ref={scopeMoon} src={'icons8-moon-90.png'} />
@@ -60,7 +60,7 @@ function Hero({ x, y }: { x: number, y: number }): JSX.Element {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
