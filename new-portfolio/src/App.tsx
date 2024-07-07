@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
+import Blog from './components/Blog'
 import { useState } from 'react'
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Hero x={mousePos.x} y={mousePos.y} />} />
+          <Route path='/blog' element={<Blog />} />
           <Route path='/about' element={<About x={mousePos.x} y={mousePos.y} />} />
         </Routes>
       </div>

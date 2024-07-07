@@ -25,6 +25,7 @@ function Navbar() {
     const scrollStyles = "bg-opacity-30 backdrop-blur-sm bg-black rounded-3xl"
 
     const links: NavLink[] = [
+        { name: 'Blog', icon: false, path: '/blog' },
         { name: 'About', icon: false, path: '/about' },
         { name: 'Resume', icon: false, path: '/Hansoo_Yoon_Resume.pdf' },
         { name: 'Github', icon: true, path: 'https://github.com/hyoon98', iconPath: "/icons8-github.svg", onHover: "/icons8-github-grey.svg" },
