@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
 import Blog from './components/Blog'
+import AddArticle from './components/AddArticle'
 import { useState } from 'react'
 
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
           <Route path='/' element={<Hero x={mousePos.x} y={mousePos.y} />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/about' element={<About x={mousePos.x} y={mousePos.y} />} />
+          <Route path='/add-article' element={<AddArticle />} />
         </Routes>
       </div>
     </BrowserRouter>
