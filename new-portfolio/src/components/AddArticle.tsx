@@ -1,4 +1,5 @@
-import ReactQuill from 'react-quill';
+
+import Editor from "./Editor";
 
 function AddArticle() {
     return (
@@ -11,8 +12,11 @@ function AddArticle() {
                         <label className='text-2xl flex flex-col py-5'>Title:
                             <input className='text-xl rounded-sm border border-white border-1' type='text' name='title' />
                         </label>
-                        <label className='text-2xl flex flex-col py-5'>Content:
+                        <label className='text-2xl py-5'>Content:
                         </label>
+                        <div className="h-[300px]">
+                            <Editor />
+                        </div>
                         <label className='text-2xl flex flex-col py-5'>Slug:
                             <input className='text-xl rounded-sm border border-white border-1' type='text' name='slug' />
                         </label>
