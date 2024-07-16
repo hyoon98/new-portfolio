@@ -17,6 +17,7 @@
     "@tiptap/react": "^2.5.0",
     "@tiptap/starter-kit": "^2.5.0",
     "@types/quill": "^2.0.14",
+    "axios": "^1.7.2",
     "framer-motion": "^11.0.5",
     "lucide-react": "^0.408.0",
     "react": "^18.2.0",

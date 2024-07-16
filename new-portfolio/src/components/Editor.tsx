@@ -71,9 +71,11 @@ function MenuBar(): React.ReactNode {
     )
 }
 
-const Editor = () => {
+const Editor = ({ getContent }: { getContent: Function }) => {
     return (
-        <EditorProvider extensions={extensions} content={content} slotBefore={<MenuBar />}>
+        <EditorProvider onUpdate={({ editor }) => {
+            return getContent(editor.getJSON());
+        }} extensions={extensions} content={content} slotBefore={<MenuBar />}>
         </EditorProvider>
     )
 }
