@@ -8,7 +8,12 @@ function AddArticle() {
 
     const handleSubmit = (e: React.FormEvent) => {
         e?.preventDefault()
-        axios.post
+        let data = new FormData(e.target as HTMLFormElement)
+        data.append('content', JSON.stringify(editorContent))
+        for (let [key, value] of data.entries()) {
+            console.log(key, value);
+        }
+        // axios.post('localhost:5000/add-article',formData)
 
     }
 

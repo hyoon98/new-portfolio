@@ -16,7 +16,7 @@ export default function App() {
           <Route path='/' element={<Hero x={mousePos.x} y={mousePos.y} />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/about' element={<About x={mousePos.x} y={mousePos.y} />} />
-          <Route path='/add-article' element={<AddArticle />} />
+          <Route path='/blog/add-article' element={<AddArticle />} />
         </Routes>
       </div>
     </BrowserRouter>
