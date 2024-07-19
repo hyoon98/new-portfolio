@@ -1,9 +1,8 @@
 import * as mongodb from "mongodb";
-
 export {};
-const express = require('express');
-const {connectToDB,getDB}=require('./db')
-const ArticleRouter= require('./routes/articles')
+import express from 'express';
+import { connectToDB, getDB } from './db';
+import ArticleRouter from './routes/articles';
 const app=express();
 
 let db:mongodb.Db;

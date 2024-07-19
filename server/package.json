@@ -16,6 +16,8 @@
     "mongodb": "^6.8.0"
   },
   "devDependencies": {
+    "tsx": "^4.16.2",
     "typescript": "^5.5.3"
-  }
+  },
+  "type": "module"
 }

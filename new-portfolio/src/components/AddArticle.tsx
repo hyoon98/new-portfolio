@@ -13,7 +13,7 @@ function AddArticle() {
         for (let [key, value] of data.entries()) {
             console.log(key, value);
         }
-        // axios.post('localhost:5000/add-article',formData)
+        axios.post('localhost:5000/add-article', data)
 
     }
 

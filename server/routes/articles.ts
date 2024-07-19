@@ -1,9 +1,10 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
 
 router.post('/post-article',(req,res)=>{
-    const db=req.db;
+    console.log(req.body)
+    // const db=req.db;
     res.send('Create an article')
 })
 
-module.exports=router;
+export default router;
